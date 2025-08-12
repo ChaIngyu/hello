@@ -32,7 +32,7 @@ for i in range(len(all_rows)):
     title, message, start_time, period = all_rows[i]
     start_dt = datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
     end_dt = start_dt + timedelta(minutes=int(period))
-    if(start_dt < now and now < end_dt):
+    if((start_dt < now) and (now < end_dt)):
         webhook_message = {
             "text": f"{title} : {message}"
         }
