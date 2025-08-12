@@ -14,4 +14,4 @@ message = {
     "text": current_datetime
 }
 
-requests.post(webhook_url, data=json.dumps(message))
+# requests.post(webhook_url, data=json.dumps(message))
