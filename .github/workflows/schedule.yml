@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Google Sheets API Key
+        run: |
+          echo "$GOOGLE_SHEET_API_KEY" > $hello/google_sheets_credentials.json
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
