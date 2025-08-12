@@ -25,3 +25,6 @@ jobs:
 
       - name: Run script
         run: python script.py
+        env:
+          WEBHOOK_LINK: ${{ secrets.WEBHOOK_LINK }}
+
