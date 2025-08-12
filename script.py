@@ -28,7 +28,7 @@ worksheet = doc.worksheet("시트1")
 
 all_rows = worksheet.get_values()[1:]
 
-for i in len(all_rows):
+for i in range(len(all_rows)):
     title, message, start_time, period = all_rows[i]
     start_dt = datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
     end_dt = start_dt + timedelta(minutes=int(period))
