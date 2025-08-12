@@ -7,7 +7,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
-now = datetime.now(ZoneInfo("Asia/Seoul"))
+now = datetime.now(ZoneInfo("Asia/Seoul")).replace(tzinfo=None)
 current_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
 print(current_datetime)
 
