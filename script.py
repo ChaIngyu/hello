@@ -7,7 +7,7 @@ now = datetime.now(ZoneInfo("Asia/Seoul"))
 current_datetime = now.strftime("%Y-%m-%d %H:%M")
 print(current_datetime)
 
-webhook_url = 'https://hooks.slack.com/services/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'
+webhook_url = 'https://hooks.slack.com/services/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'
 
 message = {
     "text": current_datetime
