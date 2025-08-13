@@ -34,12 +34,11 @@ for i in range(len(all_rows)):
     end_dt = start_dt + timedelta(minutes=int(period))
     if((start_dt < now) and (now < end_dt)):
         webhook_message = {
-            "text": f"{title} : {message}"
+            "text": f"[ {title} ]\n{message}"
         }
         requests.post(webhook_url, data=json.dumps(webhook_message))
     elif(end_dt <= now):
         worksheet.delete_rows(i+2)
-
 
 
 
